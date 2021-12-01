@@ -12,7 +12,7 @@ http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/cu
 		<http:listener-connection host="0.0.0.0" port="8081" />
 	</http:listener-config>
 	<flow name="dwl-preparationFlow" doc:id="d1758fcf-84c2-4be5-9091-8980424a0243" >
-		<http:listener doc:name="Listener" doc:id="58a3d0ca-ec25-49bf-ae80-89d147f5273d" config-ref="HTTP_Listener_config" path="dwl-preparationFlow-1"/>
+		<http:listener doc:name="Listener" doc:id="58a3d0ca-ec25-49bf-ae80-89d147f5273d" config-ref="HTTP_Listener_config" path="dwl-preparationFlow-1" allowedMethods="GET"/>
 		<set-variable value="#[attributes.queryParams.s1]" doc:name="Set Variable" doc:id="db1f4292-f399-4ce2-924e-3ea37ccb56d5" variableName="s1"/>
 		<set-variable value="#[attributes.queryParams.s2]" doc:name="Set Variable" doc:id="784e52e5-e45e-4328-84e6-028a9b5be049" variableName="s2"/>
 		<ee:transform doc:name="Transform Message" doc:id="4845d83f-8db1-4f02-8c51-f2a2a20f9669" >
